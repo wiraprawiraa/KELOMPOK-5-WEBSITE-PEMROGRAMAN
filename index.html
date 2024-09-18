@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Laundry Pion</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        @media screen and (max-width: 576px) {
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .container-header {
+                margin-top: 0;
+            }
+
+            .container-header .row .col-4:nth-child(1){
+                margin-top: 0;
+            }
+    
+            .container .row{
+                width: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .container-header .row .col-4 {
+                width: 100%;
+            }
+    
+            .container-header .row .col-4:nth-child(2) {
+                width: 100%;
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+            }
+    
+            .container-header .row .col-4:nth-child(2) img {
+                margin: auto;
+            }
+    
+            .container-about {
+              
+                padding: 0;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+    
+            .container-about .row .col-8{
+                /* display: flex;
+                justify-content: center;
+                text-align: center */
+                margin: auto;
+            }
+    
+            .container-layanan .row{
+                text-align: center
+            }
+    
+            .container-layanan .row:nth-child(2) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+    
+            .galeri {
+                width: 100%;
+                margin: 0;
+            }
+    
+            .galeri .row {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+    
+            .galeri .row .col-4{
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+                
+            }
+    
+            .container-layanan .row:nth-child(2) .col-4{
+                width: 100%;
+            }
+    
+            .container-layanan .row:nth-child(2) .col-4:nth-child(2){
+                width: 100%;
+                margin-top: 40px;
+            }
+    
+            .jasa .row .col-4 {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+            }
+    
+            .jasa .row .col-4 .card {
+                margin: auto;
+                width: 19rem;
+            }
+
+            .gambar-galeri {
+              width: 300px;
+            }
+        } 
+    </style>
+    <style>
+        .container-header {
+        margin-top: 100px;
+        margin-bottom: 140px;
+        }
+    
+        .container-header .row .col-4:nth-child(1){
+        margin-top: 100px;
+        }
+    
+        .container-header .row .col-4:nth-child(1) a {
+        background-color: #7A0BC0;
+        transition: all 0.4s ease-in-out;
+        }
+    
+        .container-header .row .col-4:nth-child(1) a:hover {
+        background-color: #270082;
+        }
+    
+        .container-header .row .col-4:nth-child(2) div {
+        border-top-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        width: 300px;
+        }
+    
+        .container-header .row .col-4:nth-child(2) img {
+        border-top-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        transition: all 0.6s ease;
+        }
+    
+        .container-header .row .col-4:nth-child(2) img:hover {
+        transform: scale(1.2);
+        }
+    
+        .container-about {
+        margin-bottom: 80px;
+        }
+    
+        .container-about .row .col-8{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+        }
+    
+        .container-layanan {
+        /* height: 100vh; */
+        }
+
+        .gambar-galeri {
+          width:340px;
+        }
+    
+        .container-layanan .row .col-4:nth-child(1) img {
+        border-top-right-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        }
+    
+        .container-kontak {
+        margin-top: 100px;
+        height: 90vh;
+        }
+    
+        .container-kontak h2 {
+        margin-top: 200px;
+        }  
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ps-3 pe-3 fixed-top" id="navbar" style="background: white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#layanan">Layanan</a>
+                </li>
+                <!-- {{-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Testimoni</a>
+                </li> --}} -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#jasa">Jasa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container container-header">
+        <div class="row justify-content-between">
+            <div class="col-4">
+              <h1 class="fw-bold" style="color: #7A0BC0">Laundry Pion</h1>
+              <h2>Spesialis Cuci Setrika Pakaian Anda</h2>
+              <br>
+              <p>"Dapatkan pelayanan maksimal kerapihan pakaian anda dengan sentuhan jari anda"</p>
+              <a href="#about" class="btn text-light">Selengkapnya</a>
+            </div>
+            <div class="col-4">
+              <div class="overflow-hidden">
+                <img src="assets/img/strikaan.jpg" width="300px" alt="Setrikaan">
+              </div>  
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-light" style="background: #270082">
+      <div class="container container-about mt-5" id="about">
+        <div class="row justify-content-center">
+          <div class="col-8 text-center">
+            <h2>Tentang Kami</h2>
+            <p class="mt">Kami adalah penyedia layanan laundry dan setrika 
+              pakaian yang mengutamakan kualitas dan kepuasan pelanggan. 
+              Dengan peralatan modern dan bahan pembersih berkualitas, 
+              kami menjamin setiap pakaian yang kami tangani akan bersih, rapi, dan terawat. 
+              Tim kami yang berpengalaman akan memastikan pakaian Anda disetrika dengan presisi untuk menjaga bentuk serta kualitas kain. 
+              Kami melayani berbagai jenis pakaian, dari pakaian sehari-hari hingga pakaian formal, dengan perawatan khusus sesuai jenis bahan. 
+              Layanan kami cepat, ramah, dan dapat diandalkan, sehingga Anda bisa menghemat waktu dan 
+              tenaga sambil tetap tampil prima.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container container-layanan" id="layanan">
+      <div class="row justify-content-evenly">
+        <div class="col-12 text">
+          <h2 style="margin-top: 60px; margin-bottom: 20px">Layanan Kami</h2>
+          <p class="mt-4 mb-5">"Layanan terbaik dari kami yang dapat anda manfaatkan untuk <br> kerapihan pakaian anda dan kepuasan anda."</p>
+        </div>
+      </div>
+      <div class="row justify-content-evenly">
+        <div class="col-4">
+          <img src="assets/img/strikaan.jpg" alt="" class="gambar-galeri shadow border">
+        </div>
+        <div class="col-4">
+          <h2 style="color: #7A0BC0">Layanan Setrika</h2>
+          <p>Laundry Pion mempunyai layanan setrika yang terdiri dari setrika uap boiler yang tentunya digunakan untuk membuat hasil setrika cucian Anda menjadi rapih sesuai dengan jenis bahan cucian Anda, sehingga Anda tidak perlu lagi khawatir hasil setrika cucian Anda menjadi kusut.</p>
+          <h2 style="color: #7A0BC0">Layanan Cuci Kering</h2>
+          <p>Layanan cuci kami menawarkan pembersihan pakaian secara menyeluruh dengan menggunakan deterjen berkualitas yang aman untuk berbagai jenis kain. Setiap pakaian dicuci dengan hati-hati untuk menjaga kebersihan, kelembutan, dan warna asli. Kami juga menyediakan layanan tambahan seperti penghilangan noda khusus dan pencucian pakaian delicate. Dengan proses cepat dan hasil yang memuaskan, kami siap membantu Anda menjaga pakaian tetap segar dan bersih.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container mt-5 mb-5 galeri">
+      <div class="row justify-content-evenly">
+        <div class="col-4">
+          <img src="assets/img/keranjang.jpg" style="border-bottom-left-radius: 50%;" alt="" class="gambar-galeri shadow border">
+        </div>
+        <div class="col-4">
+          <img src="assets/img/baju.jpg" style="border-top-right-radius: 50%" alt="" class="gambar-galeri shadow border">
+        </div>
+      </div>
+    </div>
+    
+    <div class="container container-jasa" id="jasa">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center mt-5 mb-5">
+          <h2 style="color: #7A0BC0;">Jasa Kami</h2>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+    
+      .card {
+        transition: all 0.6s ease;
+        width: 18rem;
+      }
+    
+      .harga {
+        color: gray;
+      }
+    
+      .card:hover {
+        background: #270082;
+        color: white;
+        transform: translateY(-10px)
+      }
+    
+      .card:hover .harga {
+        color: white;
+      }
+    
+    
+    
+    </style>
+    
+    <div class="container jasa mb-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <div class="card text-center shadow" style="height: 400px; margin: auto;">
+            <div class="card-body">
+              <h5 class="card-title mt-2">Cuci Setrika Regular</h5>
+              <h6 class="card-subtitle mb-2 harga mt-4">Rp 3.500/Kg</h6>
+              <p class="card-text mt-4">Pakaian akan selesai sesuai antrian dengan estimasi waktu 3-4 hari.</p>
+              <a href="#kontak" class="card-link">Pesan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card text-center shadow" style="height: 400px; margin: auto;">
+            <div class="card-body">
+              <h5 class="card-title mt-2">Cuci  Setrika Express</h5>
+              <h6 class="card-subtitle mb-2 harga mt-4">Rp 4.000/Kg</h6>
+              <p class="card-text mt-4">Pakaian akan lebih di prioritaskan dalam pengerjaan, selesai dengan estimasi waktu 1-2 hari atau bisa lebih cepat.</p>
+              <a href="#kontak" class="card-link">Pesan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container container-kontak align-items-center" id="kontak">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h2>Kontak Kami</h2>
+          <p>Silahkan hubungi kami jika anda ingin menggunakan jasa kami.</p>
+          <br>
+          <style>
+            .container .row .col-12 a {
+              background: #7A0BC0;
+              transition: all 0.4s ease-in-out;
+            }
+    
+            .container .row .col-12 a:hover {
+              background: #270082;
+            }
+          </style>
+          <a href="https://wa.me/6287841788660" target="blank" class="btn text-light kontak-wa col-md-2 rounded-pill">
+            <div class="text-center rounded-pill d-flex">
+              <img src="assets/img/whatsapp.png" width="30" height="30" class="ms-1" alt="Whatsapp">
+              <h6 class="mt-2 ms-4">Hubungi Kami</h6>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer style="width: 100%; padding: 3rem; background: #270082; color: white;" class="text-center">
+    <div class="text-light">Kelompok 5 Pemrograman Web PTIK-H
+    </div>
+    </footer>
+</body>
+
+</html>
